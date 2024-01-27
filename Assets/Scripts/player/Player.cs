@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,7 +35,7 @@ public class player : MonoBehaviour
     void Update()
     {
         movement();
-        camera();
+        Camera();
     }
 
     public void movement()
@@ -56,7 +57,7 @@ public class player : MonoBehaviour
             {
                 move.y = jumpSpeed;
             }
-            
+
         }
 
         move.y -= gravity * Time.deltaTime;
@@ -64,7 +65,7 @@ public class player : MonoBehaviour
         characterController.Move(move * Time.deltaTime);
     }
 
-    public void camera()
+    public void Camera()
     {
         h_mouse = vMouseHorizontal * Input.GetAxis("Mouse X");
         v_mouse += vMouseVertical * Input.GetAxis("Mouse Y");
@@ -74,3 +75,4 @@ public class player : MonoBehaviour
         transform.Rotate(0, h_mouse, 0);
     }
 }
+
