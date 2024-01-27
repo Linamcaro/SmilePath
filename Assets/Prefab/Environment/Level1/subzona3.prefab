@@ -713,7 +713,7 @@ GameObject:
   - component: {fileID: 1957307325495640274}
   - component: {fileID: 4570145715123908119}
   - component: {fileID: 2648728342216887998}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Floor Tile 04 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1189,7 +1189,7 @@ GameObject:
   - component: {fileID: 362159180124619263}
   - component: {fileID: 1572822848129458432}
   - component: {fileID: 2686315873643183395}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Floor Tile 04 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1294,7 +1294,7 @@ GameObject:
   - component: {fileID: 8875277149971146847}
   - component: {fileID: 7961787866991343119}
   - component: {fileID: 1481136912358401522}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Floor Tile 04 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1399,7 +1399,7 @@ GameObject:
   - component: {fileID: 2196710288568393906}
   - component: {fileID: 4628306307540554685}
   - component: {fileID: 6981994283664260945}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Floor Tile 04 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2945,7 +2945,7 @@ GameObject:
   - component: {fileID: 2914269354611219376}
   - component: {fileID: 1156776069092734964}
   - component: {fileID: 2170961499509256340}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Floor Tile 04 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3155,7 +3155,7 @@ GameObject:
   - component: {fileID: 3541990042921502470}
   - component: {fileID: 5353729070663178692}
   - component: {fileID: 8380386629483610629}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Floor Tile 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3260,7 +3260,7 @@ GameObject:
   - component: {fileID: 3870927648595351467}
   - component: {fileID: 7745629427309642084}
   - component: {fileID: 7436690297224156142}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Floor Tile 04 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3681,7 +3681,7 @@ GameObject:
   - component: {fileID: 1238696896000113192}
   - component: {fileID: 2282154629024515445}
   - component: {fileID: 2721147940827217224}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Floor Tile 04 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4224,7 +4224,7 @@ GameObject:
   - component: {fileID: 449205556571314919}
   - component: {fileID: 2636296227904102066}
   - component: {fileID: 4845715466798407081}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Floor Tile 04 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5704,7 +5704,7 @@ GameObject:
   - component: {fileID: 5994373674803590949}
   - component: {fileID: 2260944931131985637}
   - component: {fileID: 5039096859365185442}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Floor Tile 04 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5911,6 +5911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7852939834326023942}
+  - component: {fileID: 2874921929465209009}
   m_Layer: 0
   m_Name: paredes
   m_TagString: Untagged
@@ -5952,6 +5953,22 @@ Transform:
   - {fileID: 3615886270845907322}
   m_Father: {fileID: 8463736975199554336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &2874921929465209009
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5448286846669504174}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.5, y: 1, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5596679389905932589
 GameObject:
   m_ObjectHideFlags: 0
@@ -7028,8 +7045,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7303573410374747154}
+  - component: {fileID: 4914531434624806691}
   m_Layer: 0
-  m_Name: pisos
+  m_Name: FloorS2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7062,6 +7080,37 @@ Transform:
   - {fileID: 3550826931618976074}
   m_Father: {fileID: 8463736975199554336}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4914531434624806691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6907787535975280587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 71
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 3071c85bcf8965949acf11bf718f9434, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &7022952238524605205
 GameObject:
   m_ObjectHideFlags: 0
@@ -7074,7 +7123,7 @@ GameObject:
   - component: {fileID: 6431662926947453165}
   - component: {fileID: 4074073044813193670}
   - component: {fileID: 493482516876973162}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Floor Tile 04 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7179,7 +7228,7 @@ GameObject:
   - component: {fileID: 6360924622407644938}
   - component: {fileID: 5438249863692705835}
   - component: {fileID: 8199656109747986973}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Floor Tile 04 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8372,7 +8421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8327549254392506012}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
