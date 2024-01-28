@@ -17,7 +17,9 @@ public class ResetPost : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            player.SetActive(false);
             player.transform.position = transform.position;
+            player.SetActive(true);
             Debug.Log("Wather");
         }
     }
