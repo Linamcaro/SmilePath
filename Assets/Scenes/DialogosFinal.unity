@@ -1522,9 +1522,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguetext: {fileID: 43549221}
   lines:
-  - Miao miao miao
-  - Wao Wao wao
-  - a mimir
+  - Despues de tanto esfuerzo
+  - logre conseguir lo que tanto habia anhelado
+  - hacer reir a mi hija nuevamente
   textspeed: 0.05
 --- !u!114 &1151287570
 MonoBehaviour:

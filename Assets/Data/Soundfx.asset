@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd041810068db248a392327cd39daeb, type: 3}
   m_Name: Soundfx
   m_EditorClassIdentifier: 
-  teleport: {fileID: 8300000, guid: 2697863ccb11f2141b9aa0cd3fbec9fa, type: 3}
+  teleport: {fileID: 0}
   jump: {fileID: 0}
   toyPickUp: {fileID: 0}
