@@ -47,6 +47,8 @@ public class player : MonoBehaviour
         }
         else
         {
+            walkSpeed = 5;
+            runSpeed = 9;
             movement();
             camera();
         } 
