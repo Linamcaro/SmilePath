@@ -6,9 +6,10 @@ using UnityEngine;
 [RequireComponent (typeof(SceneChanger))]
 public class GameManager : MonoBehaviour
 {
-    public Action<ENUM_Levels> OnLevelComplete;
     [HideInInspector] public ENUM_Levels lastCompletedLevel;
-    
+    public Action<ENUM_Levels> OnLevelComplete;
+    public List<ENUM_Levels> CompletedLevels;
+
     private SceneChanger _sceneChanger;
 
     //Singleton
@@ -41,15 +42,8 @@ public class GameManager : MonoBehaviour
     {
         OnLevelComplete?.Invoke(completedLevel);
         lastCompletedLevel = completedLevel;
-        switch (completedLevel)
-        {
-            case ENUM_Levels.Level1:
-                ChangeScene(0, true);
-                break;
-            case ENUM_Levels.Level2:
-                ChangeScene(1, true);
-                break;
-        }
+        CompletedLevels.Add(completedLevel);
+        ChangeScene(0, true);
     }
 
     public void ChangeScene(int targetSceneIndex, bool doFade = false)
