@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Sound", menuName = "Sounds/SoundFx")]
-public class SoundFxSO : MonoBehaviour
+public class SoundFxSO : ScriptableObject
 {
-        public AudioClip footsteps;
+        public AudioClip teleport;
         public AudioClip jump;
-        public AudioClip monsterDeath;
-        public AudioClip monsterRoar;
-        public AudioClip orbPickup;
-        public AudioClip swordSlash;
+        public AudioClip toyPickUp;
 
 }

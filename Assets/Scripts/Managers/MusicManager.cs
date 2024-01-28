@@ -48,9 +48,17 @@ public class MusicManager : MonoBehaviour
         {
             PlayMusic(musicSO.mainMenuMusic);
         }
-        else
+        else if (scene.name == "LevelSelectorRoomMusic")
         {
-            PlayMusic(musicSO.gameMusic);
+            PlayMusic(musicSO.LevelSelectorRoomMusic);
+        }
+        else if(scene.name == "Level1Music")
+        {
+            PlayMusic(musicSO.Level1Music);
+        }
+        else if( scene.name == "Level2Music")
+        {
+            PlayMusic(musicSO.Level2Music);
         }
     }
 
