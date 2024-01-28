@@ -14,14 +14,6 @@ public class LevelSelectorRoomController : MonoBehaviour
         CheckCompletedLevels(GameManager.Instance.CompletedLevels);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GoToRandomLevel();
-        }
-    }
-
     private void CheckCompletedLevels(List<ENUM_Levels> completedLevels)
     {
         foreach (ENUM_Levels level in completedLevels)
