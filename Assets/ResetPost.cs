@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class ResetPost : MonoBehaviour
 {
-    [SerializeField] Transform transform;
+    public Transform transform;
+    private GameObject player;
 
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            other.transform.position = transform.position;
+            player.transform.position = transform.position;
             Debug.Log("Wather");
         }
     }
