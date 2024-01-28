@@ -4900,7 +4900,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Miprimerjuego.com
+  m_text: SmilePath
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9708ac07eab31943ab68367a5bf3681, type: 2}
   m_sharedMaterial: {fileID: 6762256924018730477, guid: e9708ac07eab31943ab68367a5bf3681, type: 2}
