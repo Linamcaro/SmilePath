@@ -7,7 +7,7 @@ public class PlayerVFx : MonoBehaviour
 {
 
     [SerializeField] private GameObject teleportParticles;
-    [SerializeField] private PlayerController playerController;
+    private PlayerController playerController;
     // Start is called before the first frame update
     void Start()
     {
