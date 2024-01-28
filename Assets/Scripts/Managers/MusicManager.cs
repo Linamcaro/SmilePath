@@ -52,11 +52,11 @@ public class MusicManager : MonoBehaviour
         {
             PlayMusic(musicSO.LevelSelectorRoomMusic);
         }
-        else if(scene.name == "Level1Music")
+        else if(scene.name == "Level_1")
         {
             PlayMusic(musicSO.Level1Music);
         }
-        else if( scene.name == "Level2Music")
+        else if( scene.name == "Level2")
         {
             PlayMusic(musicSO.Level2Music);
         }
