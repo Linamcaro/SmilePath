@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - FaderPanel
+  - toy
   layers:
   - Default
   - TransparentFX
