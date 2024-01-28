@@ -38,14 +38,14 @@ public class Patrol : MonoBehaviour
     {
 
         agent.speed = 0;
-        chaseSpeed = 0;
-        patrolSpeed = 0;
+        //chaseSpeed = 0;
+        //patrolSpeed = 0;
         Debug.Log("isStop");
     }
 
     void Update()
     {
-        if (agent.isStopped) return;
+        if (agent.speed == 0) return;
         
         if (Vector3.Distance(transform.position, player.position) < detectionDistance)
         {

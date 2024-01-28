@@ -73,8 +73,18 @@ public class InputManager : MonoBehaviour
             return inputActions.Player.Fire.triggered;
         }
 
+        /// <summary>
+        /// /Returns true if the fire control was triggered
+        /// </summary>
+        /// <returns></returns>
+        public bool PlayerRun()
+        {
+            return inputActions.Player.Run.triggered;
+        }
 
-        public Vector2 GetMouseDelta() {
+
+
+    public Vector2 GetMouseDelta() {
 
             return inputActions.Player.Look.ReadValue<Vector2>();
             
