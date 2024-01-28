@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : MonoBehaviour
+public class Player : MonoBehaviour
 {
     //movement variables
     private CharacterController characterController;
@@ -47,6 +47,8 @@ public class player : MonoBehaviour
         }
         else
         {
+            walkSpeed = 5;
+            runSpeed = 9;
             movement();
             camera();
         } 

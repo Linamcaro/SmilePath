@@ -83,12 +83,8 @@ public class RandomItems : MonoBehaviour
         }
 
 
-
-        Debug.Log("Posiciones");
-        for (int i = 0;i<listpositions.Length;i++)
-        {
-            Instantiate(items[listItems[i]],positions[listpositions[i]].position, Quaternion.identity);
-        }
+        int random = Random.Range(0, positions.Length);
+        Instantiate(items[0],positions[random].position, Quaternion.identity);
         //Debug.Log("items");
         //for(int i = 0; i < listItems.Length; i++)
         //{
