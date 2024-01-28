@@ -11,7 +11,12 @@ public class player : MonoBehaviour
     [SerializeField] private float runSpeed;
     [SerializeField] private float jumpSpeed;
     [SerializeField] private float gravity;
+    [SerializeField] private GameObject enemy;
+    public bool inMove = true;
     private Vector3 move = Vector3.zero;
+    [SerializeField] private Transform pos;
+    [SerializeField] private Animator animator;
+    
 
 
     [Header("camera")]
@@ -22,6 +27,7 @@ public class player : MonoBehaviour
     [SerializeField] float minRotate;
     [SerializeField] float maxRotate;
     [SerializeField] float h_mouse, v_mouse;
+    [SerializeField] float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -33,8 +39,29 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement();
-        camera();
+        if (!inMove)
+        {
+            walkSpeed = 0;
+            runSpeed = 0;
+            
+            //timer =- 1 * Time.deltaTime;
+            //if (timer<=0)
+            //{
+            //    transform.position = pos.position;
+            //    inMove = true;
+            //    timer = 5;
+            //    walkSpeed = 5;
+            //    runSpeed = 9;
+            //    enemy.GetComponent<Patrol>().patrolSpeed = 1.1f;
+            //}
+        }
+        else
+        {
+            movement();
+            camera();
+        }
+        
+        
     }
 
     public void movement()
