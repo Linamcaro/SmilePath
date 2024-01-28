@@ -28,9 +28,10 @@ public class teleport : MonoBehaviour
         Debug.DrawRay(ray.origin + Vector3.up, ray.direction * disTeleport);
         if (Physics.Raycast(ray, out hit,disTeleport))
         {
-            Debug.Log(hit.collider.name);
+            //Debug.Log(hit.collider.name);
             if (hit.collider.CompareTag("Player"))
             {
+                
                 animator.SetBool("isRunning",false);
                 animator.SetBool("isWalking",false);
                 animator.SetBool("isTeleporting", true);

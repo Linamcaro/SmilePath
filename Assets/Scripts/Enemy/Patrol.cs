@@ -7,18 +7,24 @@ using UnityEngine.AI;
 public class Patrol : MonoBehaviour
 {
     [SerializeField] private Transform[] points;
+    [SerializeField] private Animator animator;
     private int destPoint = 0;
     private NavMeshAgent agent;
     private int randomPoint = 0;
 
+    private teleport teleport;
     private Transform player;
-    public float patrolSpeed = 3f;
+    public float patrolSpeed = 1.2f;
     public float detectionDistance = 5f;
     public float chaseSpeed = 5f;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+
+        teleport = GetComponent<teleport>();
+
+        teleport.StopPatrol += patrol_OnStopPatrol;
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -33,12 +39,18 @@ public class Patrol : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, player.position) < detectionDistance)
         {
-
+            animator.SetBool("isWalking",false);
+            animator.SetBool("isTeleporting",false);
+            animator.SetBool("isRunning",true);
             ChasePlayer();
         }
         else if (!agent.pathPending && agent.remainingDistance < 0.5f)
         {     // Choose the next destination point when the agent gets
               // close to the current one.
+
+            animator.SetBool("isRunning",false);
+            animator.SetBool("isTeleporting",false);
+            animator.SetBool("isWalking",true);
             GotoNextPoint();
         }
     }
@@ -71,6 +83,10 @@ public class Patrol : MonoBehaviour
 
     }
 
+    private void patrol_OnStopPatrol(object sender, System.EventArgs e)
+    {
+        agent.speed = 0;
+    }
 
     private void SetDestination(Vector3 target)
     {
