@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Collector : MonoBehaviour
 {
     public TMP_Text objtos;
+    public LevelItemsController itemsController;
     private int obTomados;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,7 @@ public class Collector : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        obTomados += 1;
-        objtos.text = "Objetos: " + obTomados + "/2";
+        itemsController.TomarItem();
+        objtos.text = "Objetos: " + itemsController.ItemsTomados + "/2";
     }
 }

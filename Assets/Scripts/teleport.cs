@@ -31,6 +31,7 @@ public class teleport : MonoBehaviour
             Debug.Log(hit.collider.name);
             if (hit.collider.CompareTag("Player"))
             {
+                
                 animator.SetBool("isRunning",false);
                 animator.SetBool("isWalking",false);
                 animator.SetBool("isTeleporting", true);

@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         OnLevelComplete?.Invoke(completedLevel);
         lastCompletedLevel = completedLevel;
         CompletedLevels.Add(completedLevel);
-        ChangeScene(0, true);
+        ChangeScene(2, true);
     }
 
     public void ChangeScene(int targetSceneIndex, bool doFade = false)
