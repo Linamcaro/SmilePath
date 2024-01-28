@@ -22,6 +22,7 @@ public class Rotacion2 : MonoBehaviour
     void Update()
     {
         // Calcula la nueva posición del objeto usando funciones de seno y coseno
+        
         float x = width * Mathf.Cos(Time.time * speed);
         float y = height * Mathf.Sin(Time.time * speed);
         transform.position = startPos + new Vector3(x, 0, y);
