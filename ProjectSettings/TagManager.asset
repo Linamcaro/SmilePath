@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - FaderPanel
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - techo
+  - 
   - Water
   - UI
   - Obstacle

@@ -55,13 +55,14 @@ public class PlayerController : MonoBehaviour
         Vector3 move = new Vector3(movement.x, 0, movement.y);
         move = cameraTransform.forward * move.z +cameraTransform.right * move.x;
         move.y = 0;
-        controller.Move(move * Time.deltaTime * playerSpeed);
+        
 
         if (move != Vector3.zero)
         {
             gameObject.transform.forward = move;
         }
 
+        controller.Move(move * Time.deltaTime * playerSpeed);
         // Changes the height position of the player..
         if (jump && groundedPlayer)
         {
@@ -70,9 +71,5 @@ public class PlayerController : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
-
-
-        
-
     }
 }
