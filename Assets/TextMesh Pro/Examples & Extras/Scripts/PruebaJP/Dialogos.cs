@@ -80,4 +80,9 @@ public class Dialogos : MonoBehaviour
             }
         }
     }
+
+    public void GoBackToMenuButton()
+    {
+        GameManager.Instance.ChangeScene(0, true);
+    }
 }
