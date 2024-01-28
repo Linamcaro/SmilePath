@@ -43,17 +43,7 @@ public class player : MonoBehaviour
         {
             walkSpeed = 0;
             runSpeed = 0;
-            
-            //timer =- 1 * Time.deltaTime;
-            //if (timer<=0)
-            //{
-            //    transform.position = pos.position;
-            //    inMove = true;
-            //    timer = 5;
-            //    walkSpeed = 5;
-            //    runSpeed = 9;
-            //    enemy.GetComponent<Patrol>().patrolSpeed = 1.1f;
-            //}
+           
         }
         else
         {
