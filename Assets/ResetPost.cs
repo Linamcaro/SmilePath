@@ -20,7 +20,6 @@ public class ResetPost : MonoBehaviour
             player.SetActive(false);
             player.transform.position = transform.position;
             player.SetActive(true);
-            Debug.Log("Wather");
         }
     }
 }
