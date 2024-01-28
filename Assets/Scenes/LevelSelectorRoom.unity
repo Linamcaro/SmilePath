@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: fc56c5f20def08a45ba7c7549a6d9e48, type: 2}
   m_LightingSettings: {fileID: 1758527304}
 --- !u!196 &4
 NavMeshSettings:
@@ -6980,9 +6980,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AvaiableLevels:
   - LevelEnum: 1
-    Index: 1
+    Index: 3
   - LevelEnum: 2
-    Index: 2
+    Index: 4
   CollectedItemsInRoom:
   - ContainingLevel: 1
     ItemObject: {fileID: 375335086}
