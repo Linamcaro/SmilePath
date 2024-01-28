@@ -10,10 +10,13 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private Vector3 playerVelocity;
     [SerializeField] private bool groundedPlayer;
-    [SerializeField] private float playerSpeed;
+    [SerializeField] private float walkSpeed;
+    [SerializeField] private float runSpeed;
     [SerializeField] private float jumpHeight;
     [SerializeField] private float gravityValue;
+    public bool inMove = true;
     private bool jump;
+    private bool run;
     private Vector3 movement;
 
     private Transform cameraTransform;
@@ -27,9 +30,20 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        GetInput();
-        Movement();
 
+        if (!inMove)
+        {
+            walkSpeed = 0;
+            runSpeed = 0;
+
+        }
+        else
+        {
+            walkSpeed = 5;
+            runSpeed = 9;
+            GetInput();
+            Movement();
+        }
     }
 
     /// <summary>
@@ -39,6 +53,7 @@ public class PlayerController : MonoBehaviour
     {
         movement = InputManager.Instance.GetPlayerMovement();
         jump = InputManager.Instance.PlayerJumped();
+        run = InputManager.Instance.PlayerRun();
 
     }
 
@@ -62,7 +77,17 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.forward = move;
         }
 
-        controller.Move(move * Time.deltaTime * playerSpeed);
+        if(run)
+        {
+            controller.Move(move * Time.deltaTime * runSpeed);
+
+            Debug.Log("Player running");
+
+        }
+        else 
+        { 
+            controller.Move(move * Time.deltaTime * walkSpeed);
+        }
         // Changes the height position of the player..
         if (jump && groundedPlayer)
         {

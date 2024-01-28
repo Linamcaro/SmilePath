@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 
 
 public class teleport : MonoBehaviour
@@ -27,17 +28,27 @@ public class teleport : MonoBehaviour
         Debug.DrawRay(ray.origin + Vector3.up, ray.direction * disTeleport);
         if (Physics.Raycast(ray, out hit,disTeleport))
         {
+            Debug.Log(hit.collider.name);
             if (hit.collider.CompareTag("Player"))
             {
                 animator.SetBool("isRunning",false);
                 animator.SetBool("isWalking",false);
-                animator.SetBool("isTeleporting",true);
+                animator.SetBool("isTeleporting", true);
                 StopPatrol.Invoke(this, EventArgs.Empty);
-                hit.collider.GetComponent<player>().inMove = false;
+                hit.collider.GetComponent<PlayerController>().inMove = false;
+                StartCoroutine(TeleportAnimation(hit));
                 Debug.Log("hit");
-                //hit.transform.position = telpoint.transform.position;
+                
             }
         }
+    }
+
+    IEnumerator TeleportAnimation(RaycastHit hit)
+    {
+
+        yield return new WaitForSeconds(1.5f);
+        hit.transform.position = telpoint.transform.position;
+        hit.collider.GetComponent<PlayerController>().inMove = true;
     }
     
 }
