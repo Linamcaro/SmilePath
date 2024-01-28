@@ -33,7 +33,7 @@ public class teleport : MonoBehaviour
                 animator.SetBool("isWalking",false);
                 animator.SetBool("isTeleporting",true);
                 StopPatrol.Invoke(this, EventArgs.Empty);
-                hit.collider.GetComponent<player>().inMove = false;
+                hit.collider.GetComponent<PlayerController>().inMove = false;
                 Debug.Log("hit");
                 //hit.transform.position = telpoint.transform.position;
             }

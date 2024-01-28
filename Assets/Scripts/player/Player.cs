@@ -49,9 +49,7 @@ public class player : MonoBehaviour
         {
             movement();
             camera();
-        }
-        
-        
+        } 
     }
 
     public void movement()

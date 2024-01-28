@@ -117,7 +117,6 @@ GameObject:
   - component: {fileID: 2598961605584281250}
   - component: {fileID: 2219306818095659216}
   - component: {fileID: 4818992048345245324}
-  - component: {fileID: 1964844565992201016}
   - component: {fileID: 4255556681413459754}
   - component: {fileID: 213435496017544846}
   - component: {fileID: 7549609880184197436}
@@ -218,34 +217,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1964844565992201016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5779297021040196866}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40a400c48dad77b41b09b5a40abb6e70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 5
-  runSpeed: 9
-  jumpSpeed: 3
-  gravity: 9.8
-  enemy: {fileID: 0}
-  inMove: 1
-  pos: {fileID: 0}
-  animator: {fileID: 0}
-  cam: {fileID: 0}
-  vMouseHorizontal: 2.46
-  vMouseVertical: 1.67
-  minRotate: -65
-  maxRotate: 60
-  h_mouse: 0
-  v_mouse: 0
-  timer: 5
 --- !u!143 &4255556681413459754
 CharacterController:
   m_ObjectHideFlags: 0
@@ -333,6 +304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundedPlayer: 0
-  playerSpeed: 5
-  jumpHeight: 3
+  walkSpeed: 5
+  runSpeed: 3
+  jumpHeight: 1
   gravityValue: -9.81
+  inMove: 1
