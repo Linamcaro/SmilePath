@@ -1782,6 +1782,51 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1436336090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1436336092}
+  - component: {fileID: 1436336091}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1436336091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436336090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31770000417d2d841bb13ee1a9fe3de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundfx: {fileID: 11400000, guid: 4add7bce950fcc24c84b3a42e2d44802, type: 2}
+--- !u!4 &1436336092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436336090}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4008293, y: 0.19631797, z: -7.3861384}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1467697001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,7 +2061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4226695592354606497, guid: 55a82d56385709840845ddeac0aef990, type: 3}
       propertyPath: jumpHeight
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4255556681413459754, guid: 55a82d56385709840845ddeac0aef990, type: 3}
       propertyPath: m_MinMoveDistance
@@ -3985,3 +4030,4 @@ SceneRoots:
   - {fileID: 128724245}
   - {fileID: 22553852}
   - {fileID: 900306478}
+  - {fileID: 1436336092}

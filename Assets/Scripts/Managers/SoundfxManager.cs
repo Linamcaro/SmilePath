@@ -55,14 +55,14 @@ public class SoundfxManager : MonoBehaviour
 
     //-----------------------------------------------------------------------------------------------------------
 
-    public void TeleportFx()
+    public void PlayTeleportSound()
     {
         PlaySound(soundfx.teleport);
     }
 
     //-----------------------------------------------------------------------------------------------------------
 
-    public void ToyPickUp()
+    public void PlayToyPickUp()
     {
         PlaySound(soundfx.toyPickUp);
     }
