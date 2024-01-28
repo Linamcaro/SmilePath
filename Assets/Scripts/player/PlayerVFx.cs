@@ -18,6 +18,7 @@ public class PlayerVFx : MonoBehaviour
     {
         if (playerController.inMove)
         {
+            SoundfxManager.Instance.PlayTeleportSound();
             teleportParticles.SetActive(false);
         }
         else
