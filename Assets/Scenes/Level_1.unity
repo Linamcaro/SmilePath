@@ -444,11 +444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &704362225 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8584628505439098012, guid: 460ab2b0995efa9429635251bfc828aa, type: 3}
-  m_PrefabInstance: {fileID: 1796012860380753343}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &804166063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1010,32 +1005,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1964844565992201016, guid: 55a82d56385709840845ddeac0aef990, type: 3}
-      propertyPath: pos
-      value: 
-      objectReference: {fileID: 822498986}
-    - target: {fileID: 1964844565992201016, guid: 55a82d56385709840845ddeac0aef990, type: 3}
-      propertyPath: enemy
-      value: 
-      objectReference: {fileID: 704362225}
-    - target: {fileID: 4226695592354606497, guid: 55a82d56385709840845ddeac0aef990, type: 3}
-      propertyPath: runSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4226695592354606497, guid: 55a82d56385709840845ddeac0aef990, type: 3}
-      propertyPath: walkSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4226695592354606497, guid: 55a82d56385709840845ddeac0aef990, type: 3}
-      propertyPath: jumpHeight
-      value: 1
+    - target: {fileID: 4818992048345245324, guid: 55a82d56385709840845ddeac0aef990, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5779297021040196866, guid: 55a82d56385709840845ddeac0aef990, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 1964844565992201016, guid: 55a82d56385709840845ddeac0aef990, type: 3}
+    - {fileID: 213435496017544846, guid: 55a82d56385709840845ddeac0aef990, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
