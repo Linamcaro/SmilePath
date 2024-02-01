@@ -6,9 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/EasyMainMenu/Scenes/MainMenu.unity
+    guid: c09f4b0b2a9226946aa44a3dd8ffdfa6
+  - enabled: 1
+    path: Assets/Scenes/Predialogs.unity
+    guid: 3ee60ade403a85743adf40e1a09ba77d
+  - enabled: 1
     path: Assets/Scenes/LevelSelectorRoom.unity
     guid: e4601806bd2cefe4c9a43c3249747c52
   - enabled: 1
     path: Assets/Scenes/Level_1.unity
     guid: 34d98876f5a5a6243a2f03034899ec3b
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: ec9e488705991774d98277ef37935e65
+  - enabled: 1
+    path: Assets/Scenes/DialogosFinal.unity
+    guid: d3c90bc3c936f8749b6d7a49c9f30d5a
   m_configObjects: {}

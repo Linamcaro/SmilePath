@@ -28,8 +28,10 @@ public class teleport : MonoBehaviour
         Debug.DrawRay(ray.origin + Vector3.up, ray.direction * disTeleport);
         if (Physics.Raycast(ray, out hit,disTeleport))
         {
+            //Debug.Log(hit.collider.name);
             if (hit.collider.CompareTag("Player"))
             {
+                
                 animator.SetBool("isRunning",false);
                 animator.SetBool("isWalking",false);
                 animator.SetBool("isTeleporting", true);
@@ -45,7 +47,7 @@ public class teleport : MonoBehaviour
     IEnumerator TeleportAnimation(RaycastHit hit)
     {
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         hit.transform.position = telpoint.transform.position;
         hit.collider.GetComponent<PlayerController>().inMove = true;
     }

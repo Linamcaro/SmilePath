@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravityValue;
     public bool inMove = true;
     private bool jump;
+    private bool run;
     private Vector3 movement;
 
     private Transform cameraTransform;
@@ -23,8 +24,11 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false; // Hide the cursor
+        Cursor.lockState = CursorLockMode.Locked; // Lock the cursor to the center of the screen
         controller = gameObject.GetComponent<CharacterController>();
         cameraTransform = Camera.main.transform;
+
     }
 
     void Update()
@@ -38,6 +42,8 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            walkSpeed = 5;
+            runSpeed = 9;
             GetInput();
             Movement();
         }
@@ -50,6 +56,7 @@ public class PlayerController : MonoBehaviour
     {
         movement = InputManager.Instance.GetPlayerMovement();
         jump = InputManager.Instance.PlayerJumped();
+        run = InputManager.Instance.PlayerRun();
 
     }
 
@@ -73,7 +80,17 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.forward = move;
         }
 
-        controller.Move(move * Time.deltaTime * walkSpeed);
+        if(run)
+        {
+            controller.Move(move * Time.deltaTime * runSpeed);
+
+            Debug.Log("Player running");
+
+        }
+        else 
+        { 
+            controller.Move(move * Time.deltaTime * walkSpeed);
+        }
         // Changes the height position of the player..
         if (jump && groundedPlayer)
         {
